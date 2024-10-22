@@ -2,7 +2,8 @@ import "../styling/Priority.css";
 import Columns from "./Columns"; // Adjust the path as necessary
 
 export default function Users(users) {
-  let count = 0;
+  console.log(users);
+
   return (
     <div className="columns">
       {users.data.map((user, index) => (
@@ -10,7 +11,7 @@ export default function Users(users) {
           key={index}
           icon="src/assets/koala.jpeg"
           label={user.name}
-          count={count}
+          //   count={count}
         />
       ))}
     </div>
