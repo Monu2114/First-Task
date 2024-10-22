@@ -67,7 +67,7 @@ function App() {
       ) : selectedOption === "status" ? (
         <Status data={cardsData} />
       ) : (
-        <Users data={users} />
+        <Users users={users} tickets={cardsData} />
       )}
     </div>
   );
