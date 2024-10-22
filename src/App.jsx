@@ -1,10 +1,20 @@
 import { useState, useEffect } from "react";
 import Card from "./components/Card";
 import "./App.css";
+import Priority from "./components/Priority";
+import Status from "./components/Status";
+import Users from "./components/User";
 function App() {
   const [showDropdown, setShowDropdown] = useState(false);
+  const [cardsData, setCardsData] = useState([]);
+  const [users, setUsers] = useState([]);
+  const [selectedOption, setSelectedOption] = useState("status"); // State to track selected option
+  // Step 1: Create state to store the data
   const toggleDropdown = () => {
     setShowDropdown(!showDropdown);
+  };
+  const handleDropdownChange = (event) => {
+    setSelectedOption(event.target.value); // Update the selected option
   };
   //calling api after every render
   useEffect(() => {
@@ -14,6 +24,9 @@ function App() {
           "https://api.quicksell.co/v1/internal/frontend-assignment"
         );
         const data = await response.json();
+        setCardsData(data.tickets);
+        setUsers(data.users); // Step 2: Store data in state
+
         console.log(data);
       } catch (error) {
         console.log(error);
@@ -34,7 +47,7 @@ function App() {
         <div className="dropdown">
           <div className="dropdown-item">
             <label>Grouping</label>
-            <select>
+            <select onChange={handleDropdownChange} value={selectedOption}>
               <option value="status">Status</option>
               <option value="user">User</option>
               <option value="priority">Priority</option>
@@ -49,13 +62,13 @@ function App() {
           </div>
         </div>
       )}
-      <Card
-        id="CAM-11"
-        avatar="src\assets\koala.jpeg"
-        title="Conduct Security Assessment"
-        icon="src/assets/koala.jpeg"
-        tag="Feature Request"
-      />
+      {selectedOption === "priority" ? (
+        <Priority data={cardsData} />
+      ) : selectedOption === "status" ? (
+        <Status data={cardsData} />
+      ) : (
+        <Users data={users} />
+      )}
     </div>
   );
 }

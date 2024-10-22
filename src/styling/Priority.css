@@ -1,0 +1,19 @@
+.columns {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+}
+.col {
+  display: flex;
+  justify-content: space-around;
+  height: 20px;
+}
+.left {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.right {
+  display: flex;
+  gap: 10px;
+}

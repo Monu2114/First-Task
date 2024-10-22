@@ -37,6 +37,10 @@ body {
   justify-content: space-between;
   margin-bottom: 10px;
 }
+.cards {
+  display: grid;
+  grid-row: 5;
+}
 
 .dropdown select {
   padding: 4px;
