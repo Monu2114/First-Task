@@ -11,7 +11,7 @@ export default function Card(props) {
       </div>
       <div className="card-footer">
         <div className="badge">
-          <img src="src/assets/3 dot menu.svg" alt="icon" />
+          <img src="/assets/3 dot menu.svg" alt="icon" />
         </div>
         <button className="tag-button">{props.tag}</button>
       </div>

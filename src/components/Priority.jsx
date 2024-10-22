@@ -38,27 +38,27 @@ export default function Priority({ data }) {
   // Define priorities with icons and tasks
   const priorities = [
     {
-      icon: "src/assets/3 dot menu.svg",
+      icon: "/assets/3 dot menu.svg",
       label: "No Priority",
       tasks: categorisedPriority["No Priority"],
     },
     {
-      icon: "src/assets/SVG - Urgent Priority colour.svg",
+      icon: "/assets/SVG - Urgent Priority colour.svg",
       label: "Urgent",
       tasks: categorisedPriority.Urgent,
     },
     {
-      icon: "src/assets/Img - High Priority.svg",
+      icon: "/assets/Img - High Priority.svg",
       label: "High",
       tasks: categorisedPriority.High,
     },
     {
-      icon: "src/assets/medium.svg",
+      icon: "/assets/medium.svg",
       label: "Medium",
       tasks: categorisedPriority.Medium,
     },
     {
-      icon: "src/assets/low.svg",
+      icon: "/assets/low.svg",
       label: "Low",
       tasks: categorisedPriority.Low,
     },

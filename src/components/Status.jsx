@@ -23,27 +23,27 @@ export default function Status({ data }) {
   // Define the status categories
   const statusCategories = [
     {
-      icon: "src/assets/Backlog.svg",
+      icon: "/assets/Backlog.svg",
       label: "Backlog",
       tasks: categorizedTasks.Backlog,
     },
     {
-      icon: "src/assets/To-do.svg",
+      icon: "/assets/To-do.svg",
       label: "Todo",
       tasks: categorizedTasks.Todo,
     },
     {
-      icon: "src/assets/in-progress.svg",
+      icon: "/assets/in-progress.svg",
       label: "In Progress",
       tasks: categorizedTasks["In progress"],
     },
     {
-      icon: "src/assets/Done.svg",
+      icon: "/assets/Done.svg",
       label: "Done",
       tasks: categorizedTasks.Done,
     },
     {
-      icon: "src/assets/Cancelled.svg",
+      icon: "/assets/Cancelled.svg",
       label: "Cancelled",
       tasks: categorizedTasks.Cancelled,
     },

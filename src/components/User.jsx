@@ -9,7 +9,7 @@ export default function Users(users) {
       {users.data.map((user, index) => (
         <Columns
           key={index}
-          icon="src/assets/koala.jpeg"
+          icon="/assets/koala.jpeg"
           label={user.name}
           //   count={count}
         />
