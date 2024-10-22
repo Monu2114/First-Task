@@ -39,9 +39,9 @@ function App() {
   return (
     <div className="app">
       <button className="display" onClick={toggleDropdown}>
-        <img src="src/assets/Display.svg" alt="" />
+        <img src="/assets/Display.svg" alt="" />
         Display
-        <img src="src/assets/down.svg" alt="" />
+        <img src="/assets/down.svg" alt="" />
       </button>
       {showDropdown && (
         <div className="dropdown">
