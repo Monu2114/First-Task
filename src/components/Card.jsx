@@ -4,9 +4,11 @@ export default function Card(props) {
     <div className="card">
       <div className="card-header">
         <p>{props.id}</p>
-        <img className="avatar" src="src/assets/koala.jpeg" alt="User Avatar" />
+        <img className="avatar" src="/assets/koala.jpeg" alt="User Avatar" />
       </div>
+
       <div className="card-title">
+        <img src={props.icon} alt="" />
         <h3>{props.title}</h3>
       </div>
       <div className="card-footer">

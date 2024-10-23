@@ -64,7 +64,8 @@ export default function Status({ data }) {
                 key={task.id} // Ensure to use a unique key
                 id={task.id}
                 title={task.title} // Assuming each task has a title
-                tag={task.tag} // Assuming each task has a tag
+                tag={task.tag}
+                icon={category.icon} // Assuming each task has a tag
               />
             ))}
           </div>

@@ -56,11 +56,13 @@ function App() {
 
   return (
     <div className="app">
-      <button className="display" onClick={toggleDropdown}>
-        <img src="/assets/Display.svg" alt="" />
-        Display
-        <img src="/assets/down.svg" alt="" />
-      </button>
+      <div className="Header">
+        <button className="display" onClick={toggleDropdown}>
+          <img src="/assets/Display.svg" alt="" />
+          Display
+          <img src="/assets/down.svg" alt="" />
+        </button>
+      </div>
       <div className="rest">
         {showDropdown && (
           <div className="dropdown">
@@ -88,7 +90,7 @@ function App() {
         ) : selectedOption === "status" ? (
           <Status data={cardsData} />
         ) : (
-          <Users users={users} tickets={users} />
+          <Users users={users} tickets={cardsData} />
         )}
         {selectedOrder === "title" && <Title tickets={sortedCardsData} />}
         {selectedOrder === "priority" && (

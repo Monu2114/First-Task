@@ -1,6 +1,10 @@
 body {
   background-color: #dce1e5;
 }
+.card-title {
+  display: flex;
+  gap: 10px;
+}
 .app {
   display: flex;
   flex-direction: column;
@@ -9,6 +13,7 @@ body {
 .rest {
   background-color: #dce1e5;
 }
+
 .display {
   width: 100px;
   height: 30px;

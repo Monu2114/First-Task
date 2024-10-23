@@ -1,12 +1,19 @@
 .card {
-  width: 450px;
+  width: 400px;
   height: 160px;
   background-color: white;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  font-family: cursive;
   border: black;
+  font-size: 14px;
+}
+.tag-button {
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 4px;
 }
 .card-header {
   display: flex;
@@ -21,6 +28,7 @@
 .card-footer {
   display: flex;
   margin-left: 20px;
+  gap: 10px;
 }
 .avatar {
   width: 40px;
@@ -28,4 +36,7 @@
   object-fit: cover;
   border: 2px solid #fff; /* Optional */
   margin-right: 20px;
+}
+p {
+  color: rgb(67, 67, 66);
 }

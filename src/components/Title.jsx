@@ -2,7 +2,6 @@ import Card from "./Card";
 
 export default function Title({ tickets }) {
   // Sort tickets by title in ascending order
-
   // Return the mapped cards
   return (
     <>

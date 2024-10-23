@@ -7,24 +7,21 @@ export default function Users({ users, tickets }) {
       return user.id == ticket.userId;
     });
   });
+  const icon = "/assets/koala.jpeg";
 
   return (
     <div className="columns">
       {users.map((user, index) => (
         <div key={index} className="status-column">
-          <Columns
-            key={index}
-            icon="/assets/koala.jpeg"
-            label={user.name}
-            count={user.tasks.length}
-          />
+          <Columns key={index} label={user.name} count={user.tasks.length} />
           <div className="tasks-container">
             {user.tasks.map((task) => (
               <Card
                 key={task.id} // Ensure to use a unique key
                 id={task.id}
                 title={task.title} // Assuming each task has a title
-                tag={task.tag} // Assuming each task has a tag
+                tag={task.tag}
+                // Assuming each task has a tag
               />
             ))}
           </div>

@@ -73,13 +73,14 @@ export default function Priority({ data }) {
             label={priority.label}
             count={priority.tasks.length} // Set count to the number of tasks
           />
-          <div className="task-cards">
+          <div className="tasks-container">
             {priority.tasks.map((ticket) => (
               <Card
                 key={ticket.id} // Ensure to use a unique key
                 id={ticket.id}
                 title={ticket.title} // Assuming each task has a title
                 tag={ticket.tag}
+                icon={priority.icon}
                 // Adjust props as needed
               />
             ))}
