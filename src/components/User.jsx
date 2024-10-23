@@ -1,5 +1,5 @@
 import "../styling/Priority.css";
-import Columns from "./Columns"; // Adjust the path as necessary
+import Columns from "./slightChange"; // Adjust the path as necessary
 import Card from "../components/Card";
 export default function Users({ users, tickets }) {
   users.map((user) => {
@@ -13,7 +13,12 @@ export default function Users({ users, tickets }) {
     <div className="columns">
       {users.map((user, index) => (
         <div key={index} className="status-column">
-          <Columns key={index} label={user.name} count={user.tasks.length} />
+          <Columns
+            key={index}
+            icon={icon}
+            label={user.name}
+            count={user.tasks.length}
+          />
           <div className="tasks-container">
             {user.tasks.map((task) => (
               <Card
