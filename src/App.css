@@ -1,7 +1,14 @@
 body {
   background-color: #dce1e5;
 }
-
+.app {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.rest {
+  background-color: #dce1e5;
+}
 .display {
   width: 100px;
   height: 30px;
